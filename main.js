@@ -12,11 +12,11 @@ document.querySelector("#double button").addEventListener('click',function(){
 
 document.querySelector("#color-circle button").addEventListener('click',function(){
   // TASK #3
-    if( document.getElementById("circle-bw").style.background === rgb(0,0,0) ){
-		document.getElementById("circle-bw").style.background = rgb(255,255,255);
-    }else if ( document.getElementById("circle-bw").style.background === rgb(255,255,255)){
-		document.getElementById("circle-bw").style.background = rgb(0,0,0)
-    }
+    if( document.getElementById("circle-bw").style.background === 'black' ){
+		document.getElementById("circle-bw").style.background = 'white';
+    }else if ( document.getElementById("circle-bw").style.background === 'white'){
+		document.getElementById("circle-bw").style.background = 'black';
+	}
 })
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
