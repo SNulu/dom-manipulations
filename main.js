@@ -12,6 +12,12 @@ document.querySelector("#double button").addEventListener('click',function(){
 
 document.querySelector("#color-circle button").addEventListener('click',function(){
   // TASK #3
+  	var tile = document.getElementById("circle-bw") 
+     if(tile.background === rgb(0,0,0) ){
+        tile.background = rgb(255,255,255);
+    }else if (tile.background === rgb(255,255,255)){
+        tile.background = rgb(0,0,0)
+    }
 })
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
