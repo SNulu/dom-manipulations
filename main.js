@@ -6,6 +6,7 @@ document.querySelector("#thanks button").addEventListener('click',function(){
 
 document.querySelector("#double button").addEventListener('click',function(){
   // TASK #2
+  document.getElementById("compoundInvestment").innerHTML = 2 * document.getElementById("compoundInvestment").innerHTML;
 })
 
 
