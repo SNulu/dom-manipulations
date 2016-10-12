@@ -12,12 +12,10 @@ document.querySelector("#double button").addEventListener('click',function(){
 
 document.querySelector("#color-circle button").addEventListener('click',function(){
   // TASK #3
-  // document.getElementById(id).style.property=new style
-  	var circle = document.getElementById("circle-bw") 
-     if(circle.style.background === rgb(0,0,0) ){
-        circle.style.background = rgb(255,255,255);
-    }else if (circle.style.background === rgb(255,255,255)){
-        circle.style.background = rgb(0,0,0)
+    if( document.getElementById("circle-bw").style.background === rgb(0,0,0) ){
+		document.getElementById("circle-bw").style.background = rgb(255,255,255);
+    }else if ( document.getElementById("circle-bw").style.background === rgb(255,255,255)){
+		document.getElementById("circle-bw").style.background = rgb(0,0,0)
     }
 })
 
