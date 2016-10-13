@@ -12,16 +12,30 @@ document.querySelector("#double button").addEventListener('click',function(){
 
 document.querySelector("#color-circle button").addEventListener('click',function(){
   // TASK #3
-    if( document.getElementById("circle-bw").style.background === 'black' ){
-		document.getElementById("circle-bw").style.background = 'white';
-    }else if ( document.getElementById("circle-bw").style.background === 'white'){
-		document.getElementById("circle-bw").style.background = 'black';
+  var  colorCircle = document.getElementById("circle-bw")
+
+    if( colorCircle.style.background === 'black' ){
+		colorCircle.style.background = 'white';
+		return
+    }else if ( colorCircle.style.background === 'white'){
+		colorCircle.style.background = 'black';
 	}
+	colorCircle.style.background = 'black';
 })
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
   // TASK #4}
+  var blowUp = document.getElementById("circle-red")
+
+  	  if( blowUp.style.width === '320px';){
+  	  	blowUp.style.width = '40px';
+  	  return 
+  	}else if ( blowUp.style.width === '320px';){
+  		blowUp.style.width = '40px';
+  	}
+  	blowUp.style.width = '40px'
 })
+
 
 document.querySelector("#remove button").addEventListener('click',function(){
   // TASK #5
