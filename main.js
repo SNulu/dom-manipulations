@@ -25,15 +25,15 @@ document.querySelector("#color-circle button").addEventListener('click',function
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
   // TASK #4}
-  var blowUp = document.getElementById("circle-red")
+  var blowUp = document.getElementByClassName("circle-red")
 
-  	  if( blowUp.style.width === '320px';){
-  	  	blowUp.style.width = '40px';
+	if( blowUp.style.width <= '320px';){
+  	  	blowUp.style.width += '40px';
   	  return 
-  	}else if ( blowUp.style.width === '320px';){
+  	}else if ( blowUp.style.width > '320px';){
   		blowUp.style.width = '40px';
   	}
-  	blowUp.style.width = '40px'
+  	// blowUp.style.width = '40px'
 })
 
 
