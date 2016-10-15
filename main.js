@@ -15,25 +15,32 @@ document.querySelector("#color-circle button").addEventListener('click',function
   var  colorCircle = document.getElementById("circle-bw")
 
     if( colorCircle.style.background === 'black' ){
-		colorCircle.style.background = 'white';
-		return
+    colorCircle.style.background = 'white';
+    return
     }else if ( colorCircle.style.background === 'white'){
-		colorCircle.style.background = 'black';
-	}
-	colorCircle.style.background = 'black';
+    colorCircle.style.background = 'black';
+  }
+  colorCircle.style.background = 'black';
 })
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
   // TASK #4}
-  var blowUp = document.getElementByClassName("circle-red")
+  var blowUp = document.getElementsByClassName("circle-red")[0];
 
-	if( blowUp.style.width <= '320px';){
-  	  	blowUp.style.width += '40px';
-  	  return 
-  	}else if ( blowUp.style.width > '320px';){
-  		blowUp.style.width = '40px';
-  	}
-  	// blowUp.style.width = '40px'
+  var currWidth = blowUp.style.width.replace(/px/,'')
+  if( currWidth <= '320px'){
+
+    blowUp.style.width  = (currWidth + 40) + 'px';
+    blowUp.style.height = (currWidh + 40)+ 'px';
+  
+  }else if ( currWidth > '320px'){
+  
+    blowUp.style.width += '40px';
+    blowUp.style.height += '40px';
+  
+  }
+  return 
+ //   // blowUp.style.width = '40px'
 })
 
 
