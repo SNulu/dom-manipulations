@@ -1,4 +1,8 @@
 
+var toPx = function(val) {
+  return val + 'px'
+}
+
 document.querySelector("#thanks button").addEventListener('click',function(){
   // TASK #1
    alert("yowch! don't click me so hard!");
@@ -25,27 +29,51 @@ document.querySelector("#color-circle button").addEventListener('click',function
 
 document.querySelector("#blow-up button").addEventListener('click',function(){
   // TASK #4}
-  var blowUp = document.getElementsByClassName("circle-red")[0];
 
-  var currWidth = blowUp.style.width.replace(/px/,'')
-  if( currWidth <= '320px'){
+  // By manipulating the <div class='circle'> DOM element in JS, make the circle double height 
+  // and width until its width is greater-than/equal-to 320px.
+  // At that point make it reduce back to its original size of 40px x 40px
+  var circleRed = document.querySelector('.answer-box .circle-red'),
+      circleRedStyle = window.getComputedStyle(circleRed),
+      circleRedWidth = parseInt(circleRedStyle.width)
 
-    blowUp.style.width  = (currWidth + 40) + 'px';
-    blowUp.style.height = (currWidh + 40)+ 'px';
-  
-  }else if ( currWidth > '320px'){
-  
-    blowUp.style.width += '40px';
-    blowUp.style.height += '40px';
-  
+
+  if(circleRedWidth <= 320 ){
+    doubleWidth = circleRedWidth * 2
+    circleRed.style.width = toPx(doubleWidth)
+    circleRed.style.height = toPx(doubleWidth)
+    return 
+  }else{
+    circleRed.style.width = toPx(40)
+    circleRed.style.height = toPx(40)
+    return
   }
-  return 
- //   // blowUp.style.width = '40px'
 })
 
+/*
+// divide original width by 2
+  // computedStyle is the string "250px". It needs to become a number before I can divide it by 2.
+var halfWidth = parseInt(origWidth) / 2
+console.log(halfWidth)
+
+// assign new width to the box2Node
+box2Node.style.width = toPx(halfWidth)
+
+// you: double the size of box2s
+
+var box2sNode = document.querySelector('#box2s'),
+    box2sStyles = window.getComputedStyle(box2sNode),
+    box2sOrigWidth = box2sStyles.width,
+    doubleWidth = parseInt(box2sOrigWidth) * 2
+
+box2sNode.style.width = toPx(doubleWidth)
+
+*/
 
 document.querySelector("#remove button").addEventListener('click',function(){
   // TASK #5
+var removeBotton = document.querySelector
+
 })
 
 
