@@ -3,6 +3,12 @@ var toPx = function(val) {
   return val + 'px'
 }
 
+var reverseString = function(inStirng){
+  var charList = inStirng.split('')
+  return charList.reverse().join('')
+}
+
+
 document.querySelector("#thanks button").addEventListener('click',function(){
   // TASK #1
    alert("yowch! don't click me so hard!");
@@ -92,7 +98,7 @@ active user
   // console.log(myNode.lenght)
   // // myNode.innerHTML = '';
 
-// })
+})
 /*
 
 var clearFinished = function(node) {
@@ -114,11 +120,19 @@ var ulNode = document.querySelector("#box5 ul")
 
 document.querySelector("#reverse-squares button").addEventListener('click',function(){
   // TASK #6
-  
+
+
 })
 
 document.querySelector("#pig-latin button").addEventListener('click',function(){
+
   // TASK #7
+
+  var tasksList = document.getElementById("tasks");
+  var listElements = tasksList.getElementsByTagName("li")
+  for(var i = 0; i < listElements.length; i++){
+    listElements[i].innerHTML = reverseString(listElements[i].innerHTML)
+  }
 })
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
