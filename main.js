@@ -56,67 +56,20 @@ document.querySelector("#blow-up button").addEventListener('click',function(){
   }
 })
 
-/*
-// divide original width by 2
-  // computedStyle is the string "250px". It needs to become a number before I can divide it by 2.
-var halfWidth = parseInt(origWidth) / 2
-console.log(halfWidth)
-
-// assign new width to the box2Node
-box2Node.style.width = toPx(halfWidth)
-
-// you: double the size of box2s
-
-var box2sNode = document.querySelector('#box2s'),
-    box2sStyles = window.getComputedStyle(box2sNode),
-    box2sOrigWidth = box2sStyles.width,
-    doubleWidth = parseInt(box2sOrigWidth) * 2
-
-box2sNode.style.width = toPx(doubleWidth)
-
-*/
 
 document.querySelector("#remove button").addEventListener('click',function(){
   // TASK #5
-  // Remove each element of the list below that has the class 'inactive'.
-  /*
-  active user
-inactive user
-active user
-inactive user
-inactive user
-active user
-inactive user
-active user
-  */
 
-  // var myNode = document.getElementById("userList");
-  // var items = myNode.getElementByTagName("li");
-  // for (var i =0; i <items.lenght; ++i) {
 
-  // }
-  // console.log(myNode.lenght)
-  // // myNode.innerHTML = '';
-
-})
-/*
-
-var clearFinished = function(node) {
-  var listItems = node.children
-  // this function will look at all the children of the node
-  for (var i = 0; i < listItems.length; i ++) {
-    var liNode = listItems[i]
-    // check whether its class includes "done"
-    if (liNode.classList.contains('done')) {
-      //remove it from its parent
-      node.removeChild(liNode)
-      i--
-    }
+  var originalList = document.getElementById("userList");
+  var inactiveElements = originalList.getElementsByClassName('inactive')
+  
+  var i = inactiveElements.length
+  while (i--){
+    originalList.removeChild(inactiveElements[i])
   }
-}
+})
 
-var ulNode = document.querySelector("#box5 ul")
-*/
 
 document.querySelector("#reverse-squares button").addEventListener('click',function(){
   // TASK #6
@@ -136,5 +89,7 @@ document.querySelector("#pig-latin button").addEventListener('click',function(){
 })
 
 document.querySelector("#cycle-image button").addEventListener('click',function(){
+
   // TASK #8
+
 })
